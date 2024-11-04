@@ -45,7 +45,8 @@ except Exception as e:
     print(f'Error: {e}')
 ```
 <H3> Output:</H3>
-![326268382-0ed96e67-bd62-4c55-ba99-3d525e4a037c](https://github.com/user-attachments/assets/e0137414-a25f-4075-9f5b-da8128fe2660)
+
+![326268382-0ed96e67-bd62-4c55-ba99-3d525e4a037c](https://github.com/user-attachments/assets/43cc4212-b16b-4bb9-9472-e92b4b55abab)
 
 <H3> Result:</H3>
 
