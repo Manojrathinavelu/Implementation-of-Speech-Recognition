@@ -22,38 +22,30 @@ Step 11: Perform speech recognition with exceptional handling:<Br>
 •	A generic exception block captures any other unexpected errors.<Br>
 <H3>Program:</H3>
 
-~~~py
+```python
+pip install SpeechRecognition
+pip install pyaudio
 
-import pyaudio
 import speech_recognition as sr
-
-# initialize the Recognizer
 r = sr.Recognizer()
-
-#Set duration for audio capture
-duration = 10
-
-#Record audio
+duration = 5
 print("Say Something")
 
-# USe the default microphone as the audio source
 with sr.Microphone() as source:
     audio_data = r.listen(source, timeout=duration)
 
 try:
     text = r.recognize_google(audio_data)
-    print("you said:",text)
+    print('you said:', text)
 except sr.UnknownValueError:
-    print("Sorry, could not understand audio")
+    print('Sorry,could not understand audio')
 except sr.RequestError as e:
-    print(f'Error with the request to Google Speech Recognition Service: {e}')
+    print(f'Error with the request to Google Speech Recognition service: {e}')
 except Exception as e:
     print(f'Error: {e}')
-~~~
+```
 <H3> Output:</H3>
-
-![AAIOP-1](https://github.com/user-attachments/assets/30a028ed-7482-4b9a-b159-beff092094c6)
-![AAIOP-02](https://github.com/user-attachments/assets/6773f04c-13e6-41f0-aff6-1cded937c071)
+![326268382-0ed96e67-bd62-4c55-ba99-3d525e4a037c](https://github.com/user-attachments/assets/e0137414-a25f-4075-9f5b-da8128fe2660)
 
 <H3> Result:</H3>
 
